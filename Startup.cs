@@ -90,6 +90,7 @@ namespace jm_web_api
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             // configure DI for application services
             services.AddScoped<IUserService, UserService>();
+            //services.AddScoped<UserService>();
 
             services.AddCors();
 

@@ -26,12 +26,12 @@ namespace jm_web_api.Controllers
         private IMapper _mapper;
         private readonly AppSettings _appSettings;
 
-        public UsersController(UserService userService, IMapper mapper
+        public UsersController(IUserService userService, IMapper mapper
             , IOptions<AppSettings> appSettings)
         {
             _userService = userService;
             _mapper = mapper;
-            //_appSettings = appSettings.Value;
+            _appSettings = appSettings.Value;
         }
 
         [AllowAnonymous]
